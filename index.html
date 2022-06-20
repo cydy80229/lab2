@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,54 +9,67 @@
 
   <title>Document</title>
 </head>
+
 <body>
   <div class="wrap">
-     <div class="computer">Easy Calculator</div>
-     <p>first number<input id="num1" type="text"></p>
-     <p>second number<input  id="num2" type="text"></p>
-     <p>plus<button onclick="plus()">+</button></p>
-     <p>minus<button onclick="minus()">-</button></p>
-     <p>multipulate<button onclick="multipulate()">*</button></p>
-     <p>devide<button onclick="devide()">/</button></p>
-     <p>squareroot<button onclick="squareroot()">squareroot</button></p>
+    <div class="computer">Easy Calculator</div>
+    <p>first number<input id="num1" type="text"></p>
+    <p>second number<input id="num2" type="text"></p>
+    <p>plus<button onclick="plus()">+</button></p>
+    <p>minus<button onclick="minus()">-</button></p>
+    <p>multipulate<button onclick="multipulate()">*</button></p>
+    <p>devide<button onclick="devide()">/</button></p>
+    <p>squareroot<button onclick="squareroot()">squareroot</button></p>
+    <p>power ex 2**3 = 8<button onclick="power()">power</button></p>
 
-
-      <p><span id="result">Result</span></p>
+    <p><span id="result">Result</span></p>
   </div>
   <!-- The plus portion is reference from https://jingyan.baidu.com/article/6f2f55a1f69b70f5b93e6caa.html
 The others are the extension from it. thank you!-->
 
   <script>
-    function plus(){
-      var num1=document.getElementById('num1').value;
-      var num2=document.getElementById('num2').value;
-      var total =Number(num1)+Number(num2);
-      document.getElementById("result").innerHTML=total
-      }
-      function minus(){
-        var num1=document.getElementById('num1').value;
-        var num2=document.getElementById('num2').value;
-        var total =Number(num1)-Number(num2);
-        document.getElementById("result").innerHTML=total
-        }
-        function multipulate(){
-          var num1=document.getElementById('num1').value;
-          var num2=document.getElementById('num2').value;
-          var total =Number(num1)*Number(num2);
-          document.getElementById("result").innerHTML=total
-          }
-          function devide(){
-            var num1=document.getElementById('num1').value;
-            var num2=document.getElementById('num2').value;
-            var total =Number(num1)/Number(num2);
-            document.getElementById("result").innerHTML=total
-            }
-            function squareroot(){
-              var num1=document.getElementById('num1').value;
-              var num2=document.getElementById('num2').value;
-              var total =Number(num1)***1/2;
-              document.getElementById("result").innerHTML=total
-              }
+    function plus() {
+      var num1 = document.getElementById('num1').value;
+      var num2 = document.getElementById('num2').value;
+      var total = Number(num1) + Number(num2);
+      document.getElementById("result").innerHTML = total
+    }
+
+    function minus() {
+      var num1 = document.getElementById('num1').value;
+      var num2 = document.getElementById('num2').value;
+      var total = Number(num1) - Number(num2);
+      document.getElementById("result").innerHTML = total
+    }
+
+    function multipulate() {
+      var num1 = document.getElementById('num1').value;
+      var num2 = document.getElementById('num2').value;
+      var total = Number(num1) * Number(num2);
+      document.getElementById("result").innerHTML = total
+    }
+
+    function devide() {
+      var num1 = document.getElementById('num1').value;
+      var num2 = document.getElementById('num2').value;
+      var total = Number(num1) / Number(num2);
+      document.getElementById("result").innerHTML = total
+    }
+
+    function squareroot() {
+      var num1 = document.getElementById('num1').value;
+      var num2 = document.getElementById('num2').value;
+      var total = Math.sqrt(num1);
+      document.getElementById("result").innerHTML = total
+    }
+
+    function power() {
+      var num1 = document.getElementById('num1').value;
+      var num2 = document.getElementById('num2').value;
+      var total = Math.pow(num1, num2);
+      document.getElementById("result").innerHTML = total
+    }
   </script>
 </body>
+
 </html>
